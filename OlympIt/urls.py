@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from OlympIt import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('lessons/', views.lesson_list),
+    path('lessons/<int:id>/', views.lesson_details)
 ]
