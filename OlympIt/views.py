@@ -18,8 +18,4 @@ def lessons_by_type(request, lesson_type):
         }
         lessons_list.append(lesson_data)
 
-    response_data = {
-        "lessons": lessons_list
-    }
-
-    return JsonResponse(response_data)
+    return JsonResponse(lessons_list, safe=False)
